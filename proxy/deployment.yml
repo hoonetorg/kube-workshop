@@ -15,7 +15,7 @@ spec:
         ports:
         - containerPort: 80
       - name: haproxy
-        image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-haproxy:0.3
+        image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-haproxy:0.4
         volumeMounts:
         - name: haproxy-config
           mountPath: /etc/haproxy/
