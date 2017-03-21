@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: proxy
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: proxy
+    spec:
+      containers:
+      - name: nginx
+        image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-nginx:0.1
+        ports:
+        - containerPort: 80
