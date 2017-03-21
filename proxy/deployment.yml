@@ -14,3 +14,16 @@ spec:
         image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-nginx:0.2
         ports:
         - containerPort: 80
+      - name: haproxy
+        image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-haproxy:0.1
+        volumeMounts:
+        - name: haproxy-config
+          mountPath: /etc/haproxy/
+      - name: kube2haproxy
+        image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-kube2haproxy:0.1
+        volumeMounts:
+        - name: haproxy-config
+          mountPath: /etc/haproxy/
+      volumes:
+      - name: haproxy-config
+        emptyDir: {}
