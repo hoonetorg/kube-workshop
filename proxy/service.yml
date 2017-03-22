@@ -5,8 +5,11 @@ metadata:
   labels:
     app: proxy
 spec:
+  type: NodePort
+  clusterIP: 10.0.16.109
   ports:
   - name: http
+    nodePort: 30638
     port: 80
     protocol: TCP
   selector:

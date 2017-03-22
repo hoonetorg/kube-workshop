@@ -1,0 +1,12 @@
+kind: NetworkPolicy
+apiVersion: extensions/v1beta1
+metadata:
+  name: allow-proxy
+spec:
+  podSelector:
+    matchLabels:
+      app: proxy
+  ingress:
+    - ports:
+      - protocol: TCP
+        port: 80

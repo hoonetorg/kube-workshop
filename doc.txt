@@ -1,0 +1,5 @@
+kubectl annotate ns default "net.beta.kubernetes.io/network-policy={\"ingress\":{\"isolation\":\"DefaultDeny\"}}"
+
+kubectl annotate ns default "net.beta.kubernetes.io/network-policy-"
+
+gcloud compute firewall-rules create proxy-ingress-lb --allow tcp:30638
