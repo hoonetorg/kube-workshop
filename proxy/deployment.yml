@@ -11,9 +11,15 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-nginx:0.2
+        image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-nginx:0.6
         ports:
         - containerPort: 80
+        env:
+        - name: FRONTEND_IP
+          valueFrom:
+            configMapKeyRef:
+              name: proxy-config
+              key: frontend_ip
       - name: haproxy
         image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-haproxy:0.4
         volumeMounts:

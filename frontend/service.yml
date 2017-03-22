@@ -5,7 +5,7 @@ metadata:
   labels:
     app: frontend
 spec:
-  clusterIP: 10.3.248.204
+  clusterIP: 10.0.39.142
   ports:
   - name: http
     port: 80

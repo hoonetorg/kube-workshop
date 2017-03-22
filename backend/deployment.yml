@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: eu.gcr.io/proven-outpost-114117/netconomy-backend-stub:0.2
+        image: eu.gcr.io/proven-outpost-114117/netconomy-backend-stub:0.6
         ports:
         - containerPort: 80
         env:
