@@ -1,0 +1,6 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: proxy-config
+data:
+  frontend_ip: 10.0.39.142
