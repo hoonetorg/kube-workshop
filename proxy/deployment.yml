@@ -26,7 +26,7 @@ spec:
         - name: haproxy-config
           mountPath: /etc/haproxy/
       - name: kube2haproxy
-        image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-kube2haproxy:0.4
+        image: eu.gcr.io/proven-outpost-114117/netconomy-proxy-kube2haproxy:0.6
         volumeMounts:
         - name: haproxy-config
           mountPath: /etc/haproxy/
